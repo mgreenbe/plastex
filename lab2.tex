@@ -1,0 +1,109 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath, amsthm, amssymb}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\rref}{rref}
+\DeclareMathOperator{\nullity}{nullity}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\rank}{rank}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{thdf}{Theorem-Definition}[section]
+\newtheorem{corollary}[theorem]{Corollary} \newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition} \newtheorem{definition}[theorem]{Definition}
+\newtheorem{provdef}[theorem]{Provisional definition}
+\newtheorem{definitions}[theorem]{Definitions}
+\newtheorem{remark}[theorem]{Remark} \newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exdef}[theorem]{Example-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bd}{\mathbf{d}}
+\newcommand{\be}{\mathbf{e}}
+\newcommand{\bi}{\mathbf{i}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bz}{\mathbf{z}}
+\newcommand{\bzero}{\mathbf{0}}
+
+\newcommand{\bas}{\ba_1,\ldots,\ba_n}
+\newcommand{\mat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\Rmn}{\RR^{m\times n}} \newcommand{\Rmm}{\RR^{m\times m}}
+\newcommand{\Rnn}{\RR^{n\times n}}
+\newcommand{\spn}[1]{\Span\left(#1\right)}
+
+\newcommand{\setstuff}{\setlength{\parskip}{0.5em}\setlength{\parindent}{0em}\setlength{\itemsep}{0.5em}}
+
+\begin{document}
+\title{MATH 311 -- Winter 2018 -- Lab 2}
+\maketitle
+
+\begin{enumerate}
+
+  \setlength{\itemsep}{1em}
+
+  \item Critique the following incorrect/nonsensical statements.
+
+    \begin{enumerate}
+      \setlength{\itemsep}{0.5em}
+      \bigskip
+      \item If $N(A)=\{0\}$ then $A$ is linearly independent.
+
+      \item Vectors $\ba_1,\ldots,\ba_n$ are linearly dependent when all of their linear combinations are trivial.
+
+      \item $\spn{\ba_1,\ldots,\ba_n}$ is a linear combination of $\ba_1,\ldots,\ba_n$.
+
+      \item A vector $\bb$ belongs to the column space of $A$ if and only if $A\bx=\bb$ has a unique solution.
+
+      \item $\bb$ is a column space of $A$ if and only if $A\bx=\bb$ has a solution.
+
+      \item The columns of $A\in\RR^{m\times n}$ form a basis of $\RR^n$ if $N(A)$ is the zero subspace of $\RR^m$ and $C(A)$ spans $\RR^n$.
+    \end{enumerate}
+
+  \item Are the vectors
+    \[
+      \ba_1 = \mat{1\\-2\\-1\\3},\quad \ba_2=\mat{-3\\2\\1\\-5},\quad
+      \ba_3 = \mat{4\\-2\\-1\\6}
+    \]
+    linearly independent? If not, write one of the $\ba_j$ as a linear combination of the other two.
+
+  \item 
+    \[
+      A =\begin{bmatrix}-1 & 2 & 4 & 3\\2 & 0 & 4 & -2\\1 & 3 & 11 & 2\\0 & -1 & -3 & -1\end{bmatrix}.
+    \]
+    \bigskip
+    \begin{enumerate}
+      \setlength{\itemsep}{0.5em}
+      \item Identify the pivot columns of $A$. Write the nonpivot columns of $A$ as as linear combinations of its pivot columns.
+      \item Find a basis of $N(A)$.
+    \end{enumerate}
+
+  \item Let $\ba_1,\ba_2,\ba_3\in\RR^m$ and let 
+    \[
+    \bb_1=\ba_1,\quad \bb_2=\ba_1+\ba_2,\quad \bb_3=\ba_1+\ba_2+\ba_3.
+    \]
+    \begin{enumerate}
+  \item Prove:
+    \[
+      \spn{\ba_1,\ba_2,\ba_3} = \spn{\bb_1,\bb_1,\bb_1}.
+    \]
+  \item Prove that $\ba_1$, $\ba_2$, and $\ba_3$ are linearly independent if and only if $\bb_1$, $\bb_2$, and $\bb_3$ are.
+  \end{enumerate}
+
+
+  \item Prove the statement or give a counterexample
+    \bigskip
+    \begin{enumerate}
+      \setlength{\itemsep}{0.5em}
+    \item $A$ and $\rref(A)$ have the same column space.
+
+    \item $A$ and $\rref(A)$ have the same nullspace.
+    \end{enumerate}
+\end{enumerate}
+\end{document}

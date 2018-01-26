@@ -1,0 +1,18 @@
+<dom-document xmlns:plastex="http://plastex.sf.net/">
+<documentclass id="a0000000001">
+    <plastex:arg name="options"/>
+    <plastex:arg name="name">amsart</plastex:arg>
+</documentclass><section ref="1" id="a0000000002">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="toc">short title</plastex:arg>
+    <plastex:arg name="title">really long title</plastex:arg>
+<par id="a0000000003">
+<enumerate id="a0000000004">
+    <plastex:arg name="type"/>
+<item ref="1" id="a0000000005">
+    <plastex:arg name="term">(1)</plastex:arg>
+<par id="a0000000006">
+One</par></item><item ref="2" id="a0000000007">
+    <plastex:arg name="term"/>
+<par id="a0000000008">
+Two</par></item></enumerate></par></section></dom-document>

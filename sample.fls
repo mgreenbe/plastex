@@ -1,0 +1,22 @@
+PWD c:/Users/Matthew Greenberg/plastex
+INPUT c:/texlive/2015/texmf.cnf
+INPUT c:/texlive/2015/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT c:/Users/Matthew Greenberg/plastex/sample.tex
+OUTPUT sample.log
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amscls/amsart.cls
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amscls/amsart.cls
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT c:/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty

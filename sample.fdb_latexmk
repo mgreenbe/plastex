@@ -1,0 +1,20 @@
+# Fdb version 3
+["pdflatex"] 1516639494 "c:/Users/Matthew Greenberg/plastex/sample.tex" "sample.pdf" "sample" 1516639494
+  "c:/Users/Matthew Greenberg/plastex/sample.tex" 1516639492 827 b353b05f9c0552b748433b54720a717c ""
+  "c:/texlive/2015/texmf-dist/tex/latex/amscls/amsart.cls" 1453918095 61293 a0612b81435f5a15e07db7630c3b4bb1 ""
+  "c:/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1453918113 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
+  "c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd" 1453918113 961 6518c6525a34feb5e8250ffa91731cff ""
+  "c:/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty" 1453918124 2412 2d98314dc5be38f455f8890deeb2d091 ""
+  "c:/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty" 1453918124 4357 ad30ad08920902fc9b38caf35a3b0496 ""
+  "c:/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty" 1453918124 79178 b2e326c351e876df0e5e23df2e02441b ""
+  "c:/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty" 1453918124 4082 502152465aedb8f6a3c4b0b7c0fa8ae5 ""
+  "c:/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty" 1453918124 2637 846ebe982d3549c7ede7ce135456f54a ""
+  "c:/texlive/2015/texmf-dist/web2c/texmf.cnf" 1453921521 31985 3b2aa1e4e73426e2011ec5231ac92e0f ""
+  "c:/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1453928244 3850854 367176891a0cf2f01d2358a32e61423a ""
+  "c:/texlive/2015/texmf.cnf" 1453928147 497 7277663fd190ea5a4fe922b182dc7be2 ""
+  "myamsthm.sty" 0 -1 0 ""
+  "sample.aux" 1516635234 9 a94a2480d3289e625eea47cd1b285758 ""
+  "sample.tex" 1516639492 827 b353b05f9c0552b748433b54720a717c ""
+  (generated)
+  "sample.log"
+  "sample.pdf"
