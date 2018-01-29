@@ -1,0 +1,158 @@
+{
+    "nodeName": "#document",
+    "nodeType": 9,
+    "childNodes": [
+        {
+            "nodeName": "documentclass",
+            "nodeType": 1,
+            "id": "a0000000001",
+            "args": "[ options:dict ] name:str",
+            "attributes": {
+                "name": "amsart"
+            }
+        },
+        {
+            "nodeName": "usepackage",
+            "nodeType": 1,
+            "id": "a0000000002",
+            "args": "[ options:dict ] names:list:str",
+            "attributes": {
+                "names": [
+                    "myamsthm",
+                    "amsmath"
+                ]
+            }
+        },
+        {
+            "nodeName": "newtheorem",
+            "nodeType": 1,
+            "id": "a0000000003",
+            "args": " * name:str [ shared:str ] header:str [ parent:str] ",
+            "attributes": {
+                "name": "lemma",
+                "header": "Lemma"
+            }
+        },
+        {
+            "nodeName": "newtheorem",
+            "nodeType": 1,
+            "id": "a0000000004",
+            "args": " * name:str [ shared:str ] header:str [ parent:str] ",
+            "attributes": {
+                "name": "theorem",
+                "header": "Theorem"
+            }
+        },
+        {
+            "nodeName": "newtheorem",
+            "nodeType": 1,
+            "id": "a0000000005",
+            "args": " * name:str [ shared:str ] header:str [ parent:str] ",
+            "attributes": {
+                "name": "definition",
+                "header": "Definition"
+            }
+        },
+        {
+            "nodeName": "document",
+            "nodeType": 1,
+            "id": "a0000000006",
+            "args": "",
+            "attributes": {},
+            "title": "",
+            "tocEntry": "",
+            "childNodes": [
+                {
+                    "nodeName": "section",
+                    "nodeType": 1,
+                    "id": "a0000000007",
+                    "counter": "section",
+                    "args": "* [ toc ] title",
+                    "attributes": {
+                        "title": {
+                            "nodeName": "#document-fragment",
+                            "nodeType": 11,
+                            "childNodes": [
+                                {
+                                    "nodeName": "#text",
+                                    "nodeType": 3,
+                                    "textContent": "Section title"
+                                }
+                            ]
+                        }
+                    },
+                    "ref": {
+                        "nodeName": "#document-fragment",
+                        "nodeType": 11,
+                        "childNodes": [
+                            {
+                                "nodeName": "#text",
+                                "nodeType": 3,
+                                "textContent": "1"
+                            }
+                        ]
+                    },
+                    "title": {
+                        "nodeName": "#document-fragment",
+                        "nodeType": 11,
+                        "childNodes": [
+                            {
+                                "nodeName": "#text",
+                                "nodeType": 3,
+                                "textContent": "Section title"
+                            }
+                        ]
+                    },
+                    "tocEntry": {
+                        "nodeName": "#document-fragment",
+                        "nodeType": 11,
+                        "childNodes": [
+                            {
+                                "nodeName": "#text",
+                                "nodeType": 3,
+                                "textContent": "Section title"
+                            }
+                        ]
+                    },
+                    "childNodes": [
+                        {
+                            "nodeName": "par",
+                            "nodeType": 1,
+                            "id": "a0000000008",
+                            "args": "",
+                            "attributes": {},
+                            "childNodes": [
+                                {
+                                    "nodeName": "textbf",
+                                    "nodeType": 1,
+                                    "id": "a0000000009",
+                                    "args": "self",
+                                    "attributes": {
+                                        "self": {
+                                            "nodeName": "#document-fragment",
+                                            "nodeType": 11,
+                                            "childNodes": [
+                                                {
+                                                    "nodeName": "#text",
+                                                    "nodeType": 3,
+                                                    "textContent": "boldfaced text"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "childNodes": [
+                                        {
+                                            "nodeName": "#text",
+                                            "nodeType": 3,
+                                            "textContent": "boldfaced text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

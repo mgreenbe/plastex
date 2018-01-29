@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mgreenbe/plastex#readme",
   "dependencies": {
+    "html-minifier": "^3.5.8",
     "hyperscript": "^2.0.2",
     "katex": "^0.9.0-beta",
     "nunjucks": "^3.0.1",

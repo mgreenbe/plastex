@@ -7,13 +7,15 @@ PRIMITIVE_TYPES = [bool, str, int, float]
 
 JSON_TYPES = [list, dict] + PRIMITIVE_TYPES
 
+NODE_PROPS = ['nodeName', 'nodeType', 'id', 'counter',
+              'args', 'attributes', 'ref', 'title', 'tocEntry']
 
-def maybe_value(n, prop):
-    if hasattr(n, prop):
-        value = getattr(n, prop)
-        if value and (type(value) in JSON_TYPES or isinstance(value, Node)):
-            return value
-    return None
+
+def isWhitespace(n):
+    if isinstance(n, str):
+        return n.strip() == ''
+    if isinstance(n, Node) and n.nodeType == 3:
+        return n.isElementContentWhitespace
 
 
 def transform(x):
@@ -22,62 +24,38 @@ def transform(x):
     elif type(x) in PRIMITIVE_TYPES:
         return x
     elif isinstance(x, list):
-        return [transform(y) for y in x if y]
+        return [transform(y) for y in x if y is not None
+                and not isWhitespace(x)]
     elif isinstance(x, dict):
-        return {k: transform(x[k]) for k in x if x[k]}
+        return {k: transform(x[k]) for k in x if x[k] is not None
+                and not isWhitespace(x)}
     else:
         raise Exception("Unrecognized node type: {}".format(str(x)))
 
 
-NODE_PROPS = ['nodeName', 'nodeType', 'id', 'counter',
-              'attributes', 'ref', 'title', 'tocEntry']
-
-
 def node(n):
-
     d = []
 
     for prop in NODE_PROPS:
-        value = maybe_value(n, prop)
-        if value:
+        value = getattr(n, prop) if hasattr(n, prop) else None
+        if any([isinstance(value, t) for t in JSON_TYPES + [Node]]):
             d.append((prop, transform(value)))
 
     if isinstance(n, Text):
-        d.append(('isElementContentWhitespace', n.isElementContentWhitespace))
-        d.append(('textContent', n.textContent))
+
+        assert not n.isElementContentWhitespace
+        d.append(('textContent', str(n)))
 
     elif isinstance(n, Math.MathEnvironment):
         d.append(('childrenSource', n.childrenSource))
 
     else:
-        value = maybe_value(n, "childNodes")
-        if value:
-            d.append(("childNodes", transform(value)))
+        children = getattr(n, "childNodes") \
+                        if hasattr(n, "childNodes") else None
+        if children:
+            filtered_children = [
+                child for child in children if not isWhitespace(child)
+            ]
+            d.append(("childNodes", transform(filtered_children)))
 
     return OrderedDict(d)
-
-# NODE_TYPES = ['ELEMENT_NODE',
-#               'ATTRIBUTE_NODE',
-#               'TEXT_NODE',
-#               'CDATA_SECTION_NODE',
-#               'ENTITY_REFERENCE_NODE',
-#               'ENTITY_NODE',
-#               'PROCESSING_INSTRUCTION_NODE',
-#               'COMMENT_NODE',
-#               'DOCUMENT_NODE',
-#               'DOCUMENT_TYPE_NODE',
-#               'DOCUMENT_FRAGMENT_NODE',
-#               'NOTATION_NODE']
-
-
-# TEST
-# from plasTeX.TeX import TeX
-# import json
-
-# source = r'''
-# $\int_a^b \frac{f\prime(x)}{f(x)}dx=\log\left(\frac{f(b)}{f(a)}\right)$'''
-# tex = TeX()
-# tex.input(source)
-# document = tex.parse()
-# document.normalizeDocument()
-# print(json.dumps(transform(document), indent=4))
